@@ -9,10 +9,6 @@ sudo apt install -y xorg xbacklight xbindkeys xvkbd xinput xorg-dev
 # Python installed for bumblebee-status. PACKAGE INCLUDES build-essential.
 sudo apt install -y python3-pip 
 
-# Microcode for Intel/AMD 
-# sudo apt install -y amd64-microcode
-sudo apt install -y intel-microcode 
-
 # Network Manager
 sudo apt install -y network-manager-gnome
 
