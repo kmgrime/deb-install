@@ -4,13 +4,13 @@
 # Install packages after installing base Debian with no GUI
 
 # xorg display server installation
-sudo apt install -y xorg xbacklight xbindkeys xvkbd xinput xorg-dev
+sudo apt install -y x11-xserver-utils 
 
-# Python installed for bumblebee-status. PACKAGE INCLUDES build-essential.
+# Python installed. PACKAGE INCLUDES build-essential.
 sudo apt install -y python3-pip 
 
 # Network Manager
-sudo apt install -y network-manager-gnome
+sudo apt install -y nm-tray
 
 # Installation for Appearance management
 sudo apt install -y lxappearance 
@@ -27,11 +27,6 @@ sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
 # Neofetch/HTOP
 sudo apt install -y neofetch htop
 
-# EXA installation
-# replace ls command in .bashrc file with line below
-# alias ls='exa -al --long --header --color=always --group-directories-first' 
-sudo apt install -y exa
-
 # Bluetooth 
 sudo apt install -y bluez blueman
 
@@ -46,23 +41,17 @@ sudo apt install -y firefox-esr
 # sudo apt install -y nitrogen 
 sudo apt install -y feh
 
-# Required packages for i3-gaps installation
-sudo apt install -y meson dh-autoreconf libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev xcb libxcb1-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxcb-xinerama0-dev libxkbcommon-x11-dev libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm0 libxcb-xrm-dev libxcb-shape0 libxcb-shape0-dev i3status
-
 # Packages needed i3-gaps after installation
-sudo apt install -y dmenu sxhkd numlockx rofi dunst libnotify-bin picom unzip geany simple-scan
+sudo apt install -y dmenu sxhkd numlockx rofi dunst libnotify-bin unzip 
 
 # Command line text editor 
 sudo apt install -y neovim
 
 # Install fonts
-sudo apt install fonts-font-awesome fonts-powerline fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus fonts-cascadia-code
+sudo apt install fonts-font-awesome fonts-powerline fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus 
 
-# Create folders in user directory (eg. Documents,Downloads,etc.)
-xdg-user-dirs-update
-
-# Install i3 gaps
-sudo apt install -y i3wm
+# Install i3 
+sudo apt install -y i3 i3blocks
 
 # Dependencies for Ly Console Manager
 sudo apt install -y libpam0g-dev libxcb-xkb-dev
@@ -105,8 +94,8 @@ sudo cp ./temp /usr/share/xsessions/i3.desktop;rm ./temp
 ## These two scripts will install nerdfonts and copy my configuration files into the ~/.config directory
 ## Configuration uses 
 
-source ~/i3gaps-debian/nerdfonts.sh
-source ~/i3gaps-debian/copyconf.sh
+source ~/deb-install/nerdfonts.sh
+source ~/deb-install/copyconf.sh
 
 sudo apt autoremove
 
