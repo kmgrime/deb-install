@@ -2,7 +2,7 @@ super + Escape
     pkill -USR1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config'
 
 super + Return
-   kitty
+   alacritty
 
 #Rofi & dmenu
 
@@ -16,10 +16,8 @@ super + shift + q
      i3-msg exit
 
 super + r
-   kitty -e "ranger"
+    alacritty -e "ranger"
    
-super + g
-	google-chrome-stable
 
 super + f
 	thunar
